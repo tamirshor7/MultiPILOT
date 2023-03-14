@@ -4,7 +4,7 @@ This repository contains a PyTorch implementation of the paper:
 
 [Multi PILOT: Learned Feasible Multiple Acquisition Trajectories for Dynamic MRI](https://arxiv.org/abs/2303.07150).
 
-Tamir Shor (<tamir.shor@campus.technion.ac.il>), Tomer Weiss (<tomer196@gmail.com>), Dor Noti, Alex Bronstein
+Tamir Shor (<tamir.shor@campus.technion.ac.il>), Tomer Weiss, Dor Noti, Alex Bronstein
 
 ## Abstract
 
