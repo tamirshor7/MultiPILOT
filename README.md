@@ -32,12 +32,12 @@ First you should download the OCMR dataset from [OCMR](https://ocmr.s3.amazonaws
 
 ### Data Paths
 All of our results can be recreated using the train.py script.
-To run it, pass the path to your downloaded OCRM data using the '--data-path' argument. The OCMR dataset also contains a 'ocmr_data_attributes.csv' file - the path to this file must be passed using the '--ocmr-path' argument.//
-We recommend changing the default paths to your data paths to avoid passing these arguments within every run. To do that, change the defaults of these arguments in the 'create_arg_parser' function of the 'train.py' script.//
+To run it, pass the path to your downloaded OCRM data using the '--data-path' argument. The OCMR dataset also contains a 'ocmr_data_attributes.csv' file - the path to this file must be passed using the '--ocmr-path' argument.
+We recommend changing the default paths to your data paths to avoid passing these arguments within every run. To do that, change the defaults of these arguments in the 'create_arg_parser' function of the 'train.py' script.
 
 ### Augmentations
 While good results can be achieved by training directly over the original dataset, our experiments from the paper have all been conducted using the augmented dataset. To augment your dataset:
-1. Run the augment.py script. Make sure to pass the correct data paths as parameters. You can also control the inflation rate. The rate used in our experiments is the default. //
+1. Run the augment.py script. Make sure to pass the correct data paths as parameters. You can also control the inflation rate. The rate used in our experiments is the default. 
 2. After running the augmentation script, to use the train.py script with the augmented output, change the --data-path argument (in 'train.py') to the folder containing your augmented data.
 3. With every run of the train.py script, pass in the '--augment' parameter (you can set it to be true by default in the 'create_arg_parser' function of train.py to avoid passing it in every run).
 
