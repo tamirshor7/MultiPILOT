@@ -619,6 +619,7 @@ def run():
             traj_ls = train(args,i, traj_ls)
 
     else:
+        args.num_epochs *= (args.num_frames_per_example+1)
         train(args)
 
 
