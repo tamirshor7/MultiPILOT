@@ -604,7 +604,7 @@ def train(args,order=None, init_trajs=[]):
     print(f'Training done for order {order}, best epoch: {best_epoch}')
     writer.close()
 
-    if args.recon_resets and args.traj_freeze and model.subsampling.curr_frame < args.num_frames_per_example:
+    if args.recons_resets and args.traj_freeze and model.subsampling.curr_frame < args.num_frames_per_example:
         init_trajs.append(model.subsampling.x.data[order])
     elif args.recons_resets:
         init_trajs = model.subsampling.x.data
