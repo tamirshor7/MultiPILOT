@@ -43,8 +43,9 @@ While good results can be achieved by training directly over the original datase
 
 ### Reconstruction Resets and Trajectory Freezing
 By default, training is done without reconstruction resets or trajectory freezing. To use any of them, pass in the relevant flags - 'recons_resets' and 'traj_freeze' respectively.
-To train the full version of Multi-PILOT (with the settings that achieved optimal results in the paper) run `$ python train.py --data-path` <your data path> --ocmr-path <your ocmr csv path> --recons_resets --traj_freeze`
+To train the full version of Multi-PILOT (with the settings that achieved optimal results in the paper) run `$ python train.py --data-path <your data path> --ocmr-path <your ocmr csv path> --recons_resets --traj_freeze`
 If you use augmentations from our augmentation script, also add '--augment' to the list of arguments in the example.
+       
 ### Using PILOT Baseline
 The '--multi_traj' flag determines whether to learn independent per-frame trajectories (if true, this would be the MultiPILOT case) or a single trajectory shared across all frames (if false, this would be the PILOT baseline case). This flag is true by default. Change its default value to False to train the PILOT baseline.
 
