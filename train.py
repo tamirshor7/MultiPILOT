@@ -561,7 +561,8 @@ def train(args,order=None, init_trajs=[]):
                 model.subsampling.curr_frame = (model.subsampling.curr_frame + 1) % args.num_frames_per_example
                 optimizer.param_groups[0]['lr'] = 0.2
 
-            print(f"Optimizing Frame: {model.subsampling.curr_frame}")
+            if model.subsampling.curr_frame < args.num_frames_per_example:
+                print(f"Optimizing Frame: {model.subsampling.curr_frame}")
 
 
         start = time.time()
